@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Temperature = function(doC){
+            this.doC = doC;
+            this.doF = 9/5*doC + 32;
+            this.doKenvin = doC + 273.15;
+            this.kq = function(){
+                return this.doF + " la do F " + this.doKenvin + " la do K"
+            }
+        }  
+         var Temperature1 = new Temperature(25);
+         alert(Temperature1.kq());
+        
+        </script>
+</body>
+</html>
