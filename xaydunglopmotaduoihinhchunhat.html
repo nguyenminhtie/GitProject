@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <canvas id="myCanvas" width="200" height="100" style="border:5px solid #000000"></canvas>
+    <script>
+        var Rectangle = function(width, height, ){
+            this.width = width;
+            this.height = height;
+            this.DIENTICH = width*height;
+            this.CHUVI = 2*(width+height);
+            this.HCN = function(){
+                return this.DIENTICH + " LA DIEN TICH "  + " va " + this.CHUVI + " LA CHU VI " ;
+            }
+        }  
+        var kichthuoc = new Rectangle(170, 80);
+        alert(kichthuoc.HCN());
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+
+        var grd = ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(1,"blue");
+        grd.addColorStop(1,"white");
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,170,80);
+</script>
+    </script>
+</body>
+</html>
